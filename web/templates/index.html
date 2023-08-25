@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task-1</title>
+
+</head>
+<body>
+    <h1>Classication of 2D Fetal ultra-sound image</h1>
+    
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload">
+    </form>
+    
+    {% if message %}
+    <p>{{ message }}</p>
+    {% endif %}
+    
+    {% if image %}
+    <h2>Uploaded Image:</h2>
+    <img src= "static/images/{{image}}" alt="Uploaded Image" style="max-width: 400px;">
+    
+    {% endif %}
+    
+    {% if prediction %}
+    <h2>Prediction:</h2>
+    <p>{{ prediction }}</p>
+
+    {% endif %}
+
+
+</body>
+</html>
